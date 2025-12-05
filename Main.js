@@ -9,7 +9,7 @@ async function downloadTxtFile() {
         }
         let templateContent = await response.text();
         templateContent = templateContent
-            .replace('[GAMEURL]', CustomURL)
+            .replace('[WEBURL]', CustomURL)
             .replace('[TABNAME]', TabName)
 
         const blob = new Blob([templateContent], { type: 'text/html' });
@@ -32,3 +32,4 @@ async function downloadTxtFile() {
     }
 
 }
+
