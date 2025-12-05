@@ -1,6 +1,6 @@
 async function downloadTxtFile() {
     const filename = document.getElementById("FileName").value + ".html";
-    const CustomURL = "https://"+ document.getElementById("GameURL").value;
+    const CustomURL = "https://"+ document.getElementById("WebURL").value;
     const TabName = document.getElementById("TabName").value;
     try {
         const response = await fetch("template.txt");
@@ -30,4 +30,5 @@ async function downloadTxtFile() {
         console.error('Error processing template file:', error);
         alert('Failed to load or process the template file.');
     }
+
 }
